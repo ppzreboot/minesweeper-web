@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>网页版扫雷</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>网页版扫雷</h1>
+
+      <section class="panel">
+        <label for="difficulty">难度</label>
+        <select id="difficulty">
+          <option value="easy">初级 9×9（10雷）</option>
+          <option value="medium">中级 16×16（40雷）</option>
+          <option value="hard">高级 16×30（99雷）</option>
+        </select>
+        <button id="resetBtn" type="button">重新开始</button>
+      </section>
+
+      <section class="status">
+        <div>剩余雷数：<strong id="minesLeft">0</strong></div>
+        <div>计时：<strong id="timer">0</strong> 秒</div>
+      </section>
+
+      <p class="hint">操作：左键翻格，右键插旗（移动端可长按）。</p>
+      <div id="board" class="board" aria-label="扫雷棋盘"></div>
+      <p id="message" class="message" aria-live="polite"></p>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

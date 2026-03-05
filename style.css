@@ -1,0 +1,142 @@
+:root {
+  --bg: #f4f6fb;
+  --panel: #ffffff;
+  --border: #d8ddea;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --revealed: #e8ecf7;
+  --mine: #ef4444;
+  --flag: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.app {
+  max-width: 1000px;
+  margin: 24px auto 40px;
+  padding: 0 16px;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 28px;
+}
+
+.panel,
+.status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+}
+
+label {
+  font-weight: 600;
+}
+
+select,
+button {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.92;
+}
+
+.hint {
+  color: var(--muted);
+  margin: 10px 2px;
+}
+
+.board {
+  display: grid;
+  gap: 3px;
+  width: max-content;
+  max-width: 100%;
+  background: var(--border);
+  border: 1px solid var(--border);
+  padding: 3px;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell:hover {
+  background: #f2f5ff;
+}
+
+.cell.revealed {
+  background: var(--revealed);
+  cursor: default;
+}
+
+.cell.mine {
+  background: #ffe4e6;
+  color: var(--mine);
+}
+
+.cell.flagged {
+  color: var(--flag);
+}
+
+.n1 { color: #2563eb; }
+.n2 { color: #15803d; }
+.n3 { color: #dc2626; }
+.n4 { color: #4338ca; }
+.n5 { color: #a16207; }
+.n6 { color: #0f766e; }
+.n7 { color: #111827; }
+.n8 { color: #4b5563; }
+
+.message {
+  min-height: 24px;
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.message.win {
+  color: #15803d;
+}
+
+.message.lose {
+  color: #dc2626;
+}
