@@ -14,3 +14,17 @@
 - 自动扩散空白区
 - 胜负判定与结果提示
 - 计时与剩余雷数显示
+
+## 发布到 GitHub Pages
+
+仓库已包含自动部署工作流：`.github/workflows/deploy-pages.yml`。
+
+首次使用需要在仓库里做一次设置：
+
+1. 打开仓库 `Settings` -> `Pages`
+2. 在 `Build and deployment` 中将 `Source` 设为 **GitHub Actions**
+3. 保存后，推送代码（或在 `Actions` 页面手动运行 `Deploy GitHub Pages`）
+
+发布成功后，访问：
+
+- `https://<你的用户名>.github.io/<仓库名>/`
